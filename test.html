@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brand Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: #f9f9f9;
+        }
+
+        #partner-brands-section {
+            display: grid;
+            gap: 1rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+            grid-template-columns: repeat(2, 1fr);
+            /* Mobile default: 2 columns */
+        }
+
+        #partner-brands-section .brand-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        #partner-brands-section .salem {
+            background-color: #dff5dc;
+        }
+
+        #partner-brands-section .ambassadorbed {
+            background-color: #edf0f5;
+        }
+
+        #partner-brands-section .uratex {
+            background-color: #dee7ff;
+        }
+
+        #partner-brands-section .emma {
+            background-color: #ffeee0;
+        }
+
+        #partner-brands-section .joyce {
+            background-color: #e9ebf3;
+        }
+
+        #partner-brands-section .serta {
+            background-color: #fefbea;
+        }
+
+        #partner-brands-section .cta {
+            background-color: #e6f0ff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            grid-column: span 2;
+        }
+
+        #partner-brands-section .cta h2 {
+            margin: 0 0 0.5rem;
+            color: #2a5caa;
+            font-size: 1.1rem;
+        }
+
+        #partner-brands-section .cta p {
+            margin: 0 0 1rem;
+            color: #444;
+            font-size: 0.95rem;
+        }
+
+        #partner-brands-section .cta button {
+            background-color: #1061e6;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 999px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .cta button:hover {
+            background-color: #0044c6;
+        }
+
+        /* Tablet: 3 columns */
+        @media (min-width: 600px) {
+            #partner-brands-section {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            #partner-brands-section .cta {
+                grid-column: span 3;
+            }
+        }
+
+        /* Desktop: 4 columns */
+        @media (min-width: 900px) {
+            #partner-brands-section {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            #partner-brands-section .cta {
+                grid-column: span 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="partner-brands-section">
+        <div class="brand-card salem">Salem</div>
+        <div class="brand-card ambassadorbed">Ambassador Bed</div>
+        <div class="brand-card uratex">Uratex</div>
+        <div class="brand-card emma">Emma</div>
+        <div class="brand-card joyce">Joyce & Diana</div>
+        <div class="brand-card serta">Serta</div>
+
+        <div class="brand-card cta">
+            <h2>Curious how it feels in person?</h2>
+            <p>Try product for yourself at Abenson store near you.</p>
+            <button>Find location near you</button>
+        </div>
+    </section>
+</body>
+
+</html>

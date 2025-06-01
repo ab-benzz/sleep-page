@@ -432,3 +432,138 @@
     opacity: 1;
   }
 }
+
+/*  */
+/* Partner Brands Section */
+#partner-brands-section > h2 {
+  text-align: center;
+  color: var(--SecondaryColor-Blue60, #019bf0);
+  text-align: center;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 700;
+  margin-bottom: clamp(0px, 2vw, 12px);
+}
+#partner-brands-section > h2 span {
+  color: var(--PrimaryColor-Blue70, #185baa);
+}
+
+#partner-brands-section .brand-card-container {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  max-width: 1200px;
+  margin: auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#partner-brands-section .brand-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 164px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.brand-card > img {
+  height: 90%;
+  width: auto;
+  object-fit: contain;
+  max-width: 110px;
+}
+
+#partner-brands-section .salem {
+  background-color: #dff5dc;
+}
+
+#partner-brands-section .ambassadorbed {
+  background-color: #edf0f5;
+}
+
+#partner-brands-section .uratex {
+  background-color: #dee7ff;
+}
+
+#partner-brands-section .emma {
+  background-color: #ffeee0;
+}
+
+#partner-brands-section .joyce {
+  background-color: #e9ebf3;
+}
+
+#partner-brands-section .serta {
+  background-color: #fefbea;
+}
+
+#partner-brands-section .cta {
+  background-color: #e6f0ff;
+  border-radius: 12px;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-column: span 2;
+  gap: 12px;
+  color: var(--Primary-CTA-Font, #fff);
+}
+
+#partner-brands-section .cta h2 {
+  color: #2a5caa;
+  font-size: 1.1rem;
+}
+
+#partner-brands-section .cta p {
+  color: var(--PrimaryTextColor-PrimaryText90, #4c525c);
+  font-size: 12px;
+}
+
+#partner-brands-section .cta button {
+  background-color: #1061e6;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.cta button:hover {
+  background-color: #0044c6;
+}
+
+/* Tablet: 3 columns */
+@media (min-width: 600px) {
+  #partner-brands-section .brand-card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #partner-brands-section .cta {
+    grid-column: span 3;
+  }
+}
+
+/* Desktop: 4 columns */
+@media (min-width: 900px) {
+  #partner-brands-section .brand-card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #partner-brands-section .brand-card {
+  }
+  #partner-brands-section .cta {
+    grid-column: span 2;
+  }
+
+  .brand-card > img {
+    /* width: 50%; */
+    /* height: auto; */
+    height: 70%;
+    width: auto;
+    object-fit: contain;
+    max-width: 55%;
+  }
+}
