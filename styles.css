@@ -592,3 +592,49 @@
 
 /*  */
 /*  */
+
+#top-picks-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: #f4f8ff;
+  gap: clamp(8px, 3vw, 32px);
+}
+
+#top-picks-section img {
+  height: auto;
+  width: clamp(80px, 10vw, 120px);
+  object-fit: contain;
+}
+
+#top-picks-section > h2 {
+  line-height: 100%;
+  text-wrap: nowrap;
+  position: relative;
+  text-align: center;
+  font-size: clamp(20px, 2.5vw, 32px);
+  font-weight: 600;
+  color: var(--PrimaryTextColor-PrimaryText90, #4c525c);
+}
+
+#top-picks-section > h2 span {
+  font-weight: 700;
+}
+
+#top-picks-section > h2 span:first-of-type {
+  color: var(--SecondaryColor-Blue60, #019bf0);
+}
+#top-picks-section > h2 span:last-of-type {
+  color: var(--PrimaryColor-Blue70, #185baa);
+}
+
+/* #top-picks-section > h2::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  left: 0;
+  background-size: cover;
+  background-image: url(images/sp_top_picks_left.png);
+} */
