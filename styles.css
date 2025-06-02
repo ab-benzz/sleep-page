@@ -460,16 +460,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 164px;
+  height: clamp(175px, 15vw, 212px);
   border-radius: 12px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .brand-card > img {
   height: 90%;
   width: auto;
   object-fit: contain;
-  max-width: 110px;
+  max-width: 120px;
 }
 
 #partner-brands-section .salem {
@@ -512,16 +514,18 @@
 
 #partner-brands-section .cta h2 {
   color: #2a5caa;
-  font-size: 1.1rem;
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 114%;
+  font-weight: 600;
 }
 
 #partner-brands-section .cta p {
   color: var(--PrimaryTextColor-PrimaryText90, #4c525c);
-  font-size: 12px;
+  font-size: clamp(12px, 2vw, 16px);
 }
 
 #partner-brands-section .cta button {
-  background-color: #1061e6;
+  background: var(--PrimaryColor-Blue70, #185baa);
   color: white;
   padding: 0.6rem 1.2rem;
   border: none;
@@ -533,6 +537,31 @@
 
 .cta button:hover {
   background-color: #0044c6;
+}
+
+.brand-card > img {
+  height: 70%;
+  width: auto;
+  object-fit: contain;
+  max-width: 55%;
+}
+
+.brand-card-img-hovered {
+  opacity: 0;
+  position: absolute;
+}
+
+.brand-card:hover > .brand-card-img-hovered {
+  max-width: unset !important;
+  width: 100% !important;
+  height: auto !important;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.brand-card:hover > img:not(.brand-card-img-hovered) {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
 }
 
 /* Tablet: 3 columns */
@@ -556,14 +585,7 @@
   }
   #partner-brands-section .cta {
     grid-column: span 2;
-  }
-
-  .brand-card > img {
-    /* width: 50%; */
-    /* height: auto; */
-    height: 70%;
-    width: auto;
-    object-fit: contain;
-    max-width: 55%;
+    align-items: start;
+    padding: 50px;
   }
 }
